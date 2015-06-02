@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <title>Republican Poll</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+
+</head>
+
+<body>
+  <div id="container" style="width:300px; height:400px;"></div>
+
+
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: '2016 Democratic Presidential Nominations'
+        },
+        xAxis: {
+            categories: ["Jeb Bush", "Mark Rubio", "Scott Walker", "Ben Carson", "Mike Huckabee", "Rand Paul", "Ted Cruz", "Chris Christie", "Donald Trump", "Rick Perry", "John Kasich", "Rick Santorum", "Carly Fiorina", "Lindsey Gramham"]
+        },
+        yAxis: {
+            title: {
+                text: 'Points'
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+
+        series: [{
+            name: 'As of May 31, 2015',
+            color: '#bf2c2c',
+            data: [13.3, 12.3, 12.3, 9.5, 9.3, 8.8, 5.0, 4.0, 2.3, 2.0, 2.0, 1.4, .8]
+        }]
+    });
+});
+</script>
+
+</body>
+</html>
